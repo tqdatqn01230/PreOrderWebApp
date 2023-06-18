@@ -19,12 +19,14 @@ namespace DataLayer.Repositories
             var query = attachPredicates(predicates);
 
             return await paging(query,page)
+                .Include(x => x.Role)
                 .ToListAsync();
         }
         public async Task<List<Account>> GetAccountsWithAddresses(List<Expression<Func<Account, bool>>> predicates, Paging page)
         {
             var query = attachPredicates(predicates);
             return await paging(query, page)
+                .Include(x => x.Role)
                 .Include(x => x.Addresses)  
                 .ToListAsync();
         }

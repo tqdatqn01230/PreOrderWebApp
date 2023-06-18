@@ -47,6 +47,8 @@ namespace DataLayer.Models
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
+                entity.Property(e => e.FullName).HasMaxLength(150);
+
                 entity.Property(e => e.Password)
                     .HasMaxLength(50)
                     .IsUnicode(false);

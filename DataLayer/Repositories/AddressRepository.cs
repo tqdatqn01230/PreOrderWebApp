@@ -19,6 +19,7 @@ namespace DataLayer.Repositories
         {
             var query = attachPredicates(predicates);
             return await paging(query, page)
+                .Include(x=> x.Account)
                 .ToListAsync();         
         }
     }

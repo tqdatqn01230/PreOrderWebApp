@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using DataLayer.Models;
 using DataLayer.Repositories;
 using DataLayer;
+using System.Linq.Expressions;
+using System.Collections.Generic;
+using BusinessLayer.Services.AccountService;
 
 namespace API.Controllers
 {
@@ -16,11 +19,12 @@ namespace API.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly AddressRepository addressRepository;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, AddressRepository address)
+        private readonly IAccountService _accountService;
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, AddressRepository address, IAccountService accountService)
         {
             addressRepository = address;
             _logger = logger;
+            _accountService = accountService;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -35,14 +39,10 @@ namespace API.Controllers
             .ToArray();
         }
         [HttpGet("/test")]
-        public IEnumerable<Address> GetAddresses(int pageNumber, int pageSize)
+        public async Task<ObjectResult> GetAccountById(int accountId)
         {
-            Paging page = new Paging()
-            {
-                PageNumber = pageNumber,
-                PageSize = pageSize
-            };
-            return addressRepository.GetAddress(x => x.AccountId == 2, page);
+            var res = await _accountService.GetAccountById(accountId);
+            return res;
         }
     }
 }

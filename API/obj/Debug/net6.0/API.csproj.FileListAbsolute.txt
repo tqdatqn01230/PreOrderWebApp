@@ -264,3 +264,6 @@ C:\Users\acern\source\capstone\PE_PRN221\PreOrderWebApp\API\obj\Debug\net6.0\ref
 C:\Users\acern\source\capstone\PE_PRN221\PreOrderWebApp\API\obj\Debug\net6.0\API.pdb
 C:\Users\acern\source\capstone\PE_PRN221\PreOrderWebApp\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\acern\source\capstone\PE_PRN221\PreOrderWebApp\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\acern\source\capstone\PE_PRN221\PreOrderWebApp\API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\acern\source\capstone\PE_PRN221\PreOrderWebApp\API\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\acern\source\capstone\PE_PRN221\PreOrderWebApp\API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll

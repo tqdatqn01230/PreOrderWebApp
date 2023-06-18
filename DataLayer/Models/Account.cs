@@ -17,6 +17,7 @@ namespace DataLayer.Models
         public string? Phone { get; set; }
         public string? Email { get; set; }
         public int RoleId { get; set; }
+        public string? FullName { get; set; }
 
         public virtual Role Role { get; set; } = null!;
         public virtual ICollection<AccountOrder> AccountOrders { get; set; }

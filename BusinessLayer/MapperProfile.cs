@@ -12,6 +12,8 @@ namespace BusinessLayer
     {
         public MapperProfile()
         {
+            //Address
+            CreateMap<AddressCreateUpdateRequest, Address>();
             CreateMap<Address, AddressResponse>();
             //Account
             CreateMap<AccountCreateRequest, Account>();

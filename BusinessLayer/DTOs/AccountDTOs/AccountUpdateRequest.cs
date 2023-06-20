@@ -9,6 +9,7 @@ namespace BusinessLayer.DTOs
 {
     public class AccountUpdateRequest
     {
+
         [Required(ErrorMessage = "Password is Required")]
         [MaxLength(20)]
         [MinLength(5)]

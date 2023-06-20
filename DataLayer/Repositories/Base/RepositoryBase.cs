@@ -18,7 +18,7 @@ namespace DataLayer.Repositories
             _context = context;
             _dbSet = _context.Set<T>();
         }
-
+      
         public  void Create(T entity)
         {
             _dbSet.Add(entity);

@@ -30,6 +30,7 @@ services.AddScoped<AddressRepository>();
 services.AddScoped<IUnitOfWork,UnitOfWork>();
 
 services.AddScoped<IAccountService>(services => new AccountService(services.GetRequiredService<IUnitOfWork>(), services.GetRequiredService<IMapper>()));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
